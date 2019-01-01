@@ -225,12 +225,26 @@
 <div class="container-fluid">
 	<div class="row-fluid">
 		<div class="span12">
+<p>
+    <br/>
+</p>
+			<img src="\assets\2018\silversharkmod\preview.jpg" width="100%">
+<p>
+    <br/>
+</p>
 			<p>
 				本页为银鲨Silvershark VII 的 Assetto Corsa mod 制作过程的回顾纪录。可供其他mod制作者提供参考借鉴，避免一些初级错误。因为本人初次接触此类mod制作，难免会有许多疏漏，望各位多多包涵。本mod制作需要制作者稍有3ds Max 和 PS基础，如果没有建议先自己学习一些基础操作（就不会像我一样中道崩殂）
 			</p>
+			
+<p>
+    <br/>
+</p>
 			<h3>
 				0.动手之前
 			</h3>
+<p>
+    <br/>
+</p>
 			<p>
 				首先需要准备的软件有：
 			</p>
@@ -263,18 +277,30 @@
 			<p>
 				3DSimED: http://sim-garage.co.uk/
 			</p>
+<p>
+    <br/>
+</p>
 			<h3>
 				0.1 开始动手 ……前的热身运动
 			</h3>
+<p>
+    <br/>
+</p>
 			<p>
 				在这个官网上有制作一个最简单的神力科莎车辆mod的教程 assettocorsamods.net/threads/your-first-car-in-assetto-corsa-basic-guide.1019 ，在最下面有一个下载地址，包含了车辆的mod、fbx文件等等，是一个很好的例子，建议先下载一份，在接下来的过程中可以随时拿出来做做实验。
 			</p>
 			<p>
 				同时此网址对于这个简单的mod也做了较为详细的教学内容，接下来的一部分将会以此教程为辅助进行解释讲解。
 			</p>
+<p>
+    <br/>
+</p>
 			<h3>
 				1. 将已有车辆模型按照对应单位导入进3ds Max中
 			</h3>
+<p>
+    <br/>
+</p>
 			<p>
 				首先必须要有一份车辆模型。3ds Max支持导入CATIApart，stp，igs等文件，建议将其转换为一份igs文件，而后导入3ds Max。
 			</p>
@@ -284,12 +310,21 @@
 			<p>
 				导入时注意文件的具体单位转换，和软件本身的单位设置有关，详细设置说明可以通过搜索得到。
 			</p>
+<p>
+    <br/>
+</p>
 			<h3>
 				2.模型配置
 			</h3>
+<p>
+    <br/>
+</p>
 			<p>
 				导入后按照前述的初级教程，对3ds Max里面的模型进行初级基本配置。
 			</p>
+<p>
+    <br/>
+</p>
 			<blockquote>
 				<p>
 					<strong>2/ Preparing your 3D model</strong><br /><span>Screens here are made in Blender, as that's the tool at hand. Similar concept will apply for 3dsmax, Maya or other modelling package.</span><br /><img src="https://assettocorsamods.net/attachments/05_hierarchy-png.1944/" alt="05_hierarchy.png" class="bbCodeImage LbImage" /><br /><span>*above scene will also be attached to present post</span><br /><br /><strong>2A: dummy names</strong><br /><span>Set scale to Meters.</span><br /><span>Model the basic car. A car body and 4 wheels. All objects MUST have a material/texture.</span><br /><span>Naming (for visual mesh) can be anything. I prefer to use a prefix like VISUAL so it's clear what part is what.</span><br /><br /><span>Create dummies that control the wheels.</span> <strong>Remember, when we use dummies, the names are key factor, so always respect them</strong><span>. (use CAPS). In present case (LF stands for Left Front, LR for Left Right, etc):</span><br /><span>WHEEL_LF</span><br /><span>WHEEL_LR</span><br /><span>WHEEL_RF</span><br /><span>WHEEL_RR</span><br /><br /><span>NOTE: never scale them once created (especially if working in 3dsmax). For game logic, it doesn't matter what size they are, but scaling them afterwards can cause all sorts of issues.</span><br />
@@ -298,18 +333,30 @@
 					<strong>2B: respect scene hierarchy</strong><br /><span>Make every mesh a child to its respective dummy !</span><br /><span>In this case, we want the wheels to rotate, so we need to make the visual wheel a child to the dummy. E.g.: Visual_wheel_LF mesh is a child of WHEEL_LF dummy.</span><br /><span>The hierarchy is very important. If we don't respect it, the car might load ok, but nothing will move. The wheels would be stationary as if part of the body design</span><img src="https://assettocorsamods.net/styles/default/xenforo/clear.png" class="mceSmilieSprite mceSmilie1" alt=":)" /><span>.</span><br /><br /><span>IMPORTANT NOTES:</span><br /><span>- all dummies must have Z-axis pointing forward and Y-up.</span><br /><span>- car's body origin/pivot point : the model must be placed with the wheels touching the ground on the 0 coordinate (see below).</span><br /><img src="https://assettocorsamods.net/attachments/07_pivot_points-png.1945/" alt="07_pivot_points.png" class="bbCodeImage LbImage" /><br /><br /><span>- pivot point of dummy must be identical to pivot of child mesh (or vice-versa). E.g. below: wheel mesh (colored texture) and the dummy (cube) have identical origin/pivot point.</span><br /><img src="https://assettocorsamods.net/attachments/08_pivot_origin-png.1946/" alt="08_pivot_origin.png" class="bbCodeImage LbImage" />
 				</p>
 			</blockquote>
+<p>
+    <br/>
+</p>
 			<h3>
 				3. 对主要部件展uv图，为模型贴图做准备
 			</h3>
+<p>
+    <br/>
+</p>
 			<p>
 				因为车辆肯定少不了会有涂装，所以展uv将是一步必不可少的工作，主要需要展uv的地方是一些大面积显眼的地方，以及有固定图案贴图的地方，比如单体壳，空套等。这个时候单体壳填孔的好处就体现出来了，没有许多小孔在展uv时将会减少不少工作量，并且会得到更高的贴图质量。
 			</p>
 			<p>
 				展uv图的过程在此就不赘述，网上有许多相关的教程。主要注意展开来的图要利用好位图空间，合理排布，展开图要尽量均匀平滑，表面积大的部件或者是贴图精细的部件需要更大分辨率的贴图，以提高显示质量。
 			</p>
+<p>
+    <br/>
+</p>
 			<h3>
 				4. 导入到sdk-kseditor进行贴图
 			</h3>
+<p>
+    <br/>
+</p>
 			<p>
 				kseditor是Assetto Corsa的sdk工具包之一，为模型导入修改贴图用。具体位置在: steam安装文件夹\Steam\steamapps\common\assettocorsa\sdk\editor\ksEditor.exe
 			</p>
@@ -319,15 +366,27 @@
 			<p>
 				导出之后覆盖原来下载的mod模型包的kn5文件并改名后就可以再游戏中看到自己的模型啦！
 			</p>
+<p>
+    <br/>
+</p>
 			<h3>
 				5. 修改模型物理配置信息
 			</h3>
+<p>
+    <br/>
+</p>
 			<p>
 				车辆mod的物理信息在acd文件中，此时需要acd tool解包工具将acd文件解压成我们能够修改的ini文件。根据软件提示解包后将在同目录生成一个data文件夹，改变里面的ini文件将对车辆信息造成影响。
 			</p>
+<p>
+    <br/>
+</p>
 			<h3>
 				6. 占坑待续。。。
 			</h3>
+<p>
+    <br/>
+</p>
 		</div>
 	</div>
 </div>
