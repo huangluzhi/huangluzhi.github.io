@@ -6,32 +6,32 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 
-  <title>安卓自定义View进阶-缩放手势检测(ScaleGestureDecetor)</title>
-  <meta name="description" content="Android 手势检测，主要是 ScaleGestureDecetor 相关内容的用法和注意事项，本文依旧属于事件处理这一体系，部分内容会涉及到之前文章提及过的知识点，如果你没看过之前的文章，可以到自定义View系列来查看这些内容。">
-  <meta name="author" content="GcsSloop">
-  <meta name="keywords" content="ScaleGestureDecetor, 自定义View详解, 自定义控件, 安卓, Android, CustomView, GcsSloop">
-  <meta name="关键字" content="ScaleGestureDecetor, 自定义View详解, 自定义控件, 安卓, Android, CustomView, GcsSloop">
+  <title>介绍一门神奇的课</title>
+  <meta name="description" content="小成本小游戏制作过程，主要运用C加上EasyX 的图形库实现，为大学的一门课程内容。">
+  <meta name="author" content="Huangluzhi">
+  <meta name="keywords" content="EasyX,黄鲁直,Karabac,小游戏,C 语言">
+  <meta name="关键字" content="EasyX,黄鲁直,Karabac,小游戏,C 语言">
   
 
   <meta name="twitter:card" content="summary">
-  <meta name="twitter:title" content="安卓自定义View进阶-缩放手势检测(ScaleGestureDecetor)">
-  <meta name="twitter:description" content="Android 手势检测，主要是 ScaleGestureDecetor 相关内容的用法和注意事项，本文依旧属于事件处理这一体系，部分内容会涉及到之前文章提及过的知识点，如果你没看过之前的文章，可以到自定义View系列来查看这些内容。">
-  <meta name="twitter:keywords" content="ScaleGestureDecetor, 自定义View详解, 自定义控件, 安卓, Android, CustomView, GcsSloop">
+  <meta name="twitter:title" content="介绍一门神奇的课">
+  <meta name="twitter:description" content="小成本小游戏制作过程，主要运用C加上EasyX 的图形库实现，为大学的一门课程内容。">
+  <meta name="twitter:keywords" content="EasyX,黄鲁直,Karabac,小游戏,C 语言">
   
   <meta property="og:type" content="article">
-  <meta property="og:title" content="安卓自定义View进阶-缩放手势检测(ScaleGestureDecetor)">
-  <meta property="og:description" content="Android 手势检测，主要是 ScaleGestureDecetor 相关内容的用法和注意事项，本文依旧属于事件处理这一体系，部分内容会涉及到之前文章提及过的知识点，如果你没看过之前的文章，可以到自定义View系列来查看这些内容。">
-  <meta name="og:keywords" content="ScaleGestureDecetor, 自定义View详解, 自定义控件, 安卓, Android, CustomView, GcsSloop">
+  <meta property="og:title" content="介绍一门神奇的课">
+  <meta property="og:description" content="小成本小游戏制作过程，主要运用C加上EasyX 的图形库实现，为大学的一门课程内容。">
+  <meta name="og:keywords" content="EasyX,黄鲁直,Karabac,小游戏,C 语言">
 
   <meta name="theme-color" content="#343434">
   
-  <link rel="icon" type="image/png" href="https://raw.githubusercontent.com/GcsSloop/gcssloop.github.io/master/assets/siteinfo/favicon.png" />
-  <link href="https://raw.githubusercontent.com/GcsSloop/gcssloop.github.io/master/assets/siteinfo/favicon.png" rel="shortcut icon" type="image/png">
+  <link rel="icon" type="image/png" href="https://huangluzhi.github.io/assets/siteinfo/favicon.png" />
+  <link href="https://huangluzhi.github.io/assets/siteinfo/favicon.png" rel="shortcut icon" type="image/png">
   
   <link href="//netdna.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css" rel="stylesheet">
   <link rel="stylesheet" href="/css/main.css">
 
-  <link rel="canonical" href="http://www.gcssloop.com/customview/scalegesturedetector">
+  <link rel="canonical" href="https://huangluzhi.github.io/customview/karabac">
   <link rel="alternate" type="application/rss+xml" title="GcsSloop" href="http://www.gcssloop.com/feed.xml">
   
   <meta name="google-site-verification" content="Z_g58PkzRAyBMxkqrcDdWrTBK8oOWM-7rUHauhLNF2E" />
@@ -75,24 +75,24 @@
         <i class="fa fa-angle-up btn-mobile-close__icon hidden"></i>
     </span>
     
-    <header class="panel-cover panel-cover--collapsed" style="background-image: url('/assets/siteinfo/background-cover.jpg')">
+    <header class="panel-cover " style="background-image: url('/assets/siteinfo/background-cover.jpg')">
   <div class="panel-main">
 
     <div class="panel-main__inner panel-inverted">
     <div class="panel-main__content">
 
-        <a href="/#blog" title="前往 GcsSloop 的主页" class="blog-button"><img src="/assets/siteinfo/avatar.jpg" width="80" alt="GcsSloop logo" class="panel-cover__logo logo" /></a>
-        <h1 class="panel-cover__title panel-title"><a href="/#blog" title="link to homepage for GcsSloop" class="blog-button">GcsSloop</a></h1>
+        <a href="" title="前往 黄鲁直 的主页" class="blog-button"><img src="/assets/siteinfo/avatar.jpg" width="80" alt="HuangLuzhi logo" class="panel-cover__logo logo" /></a>
+        <h1 class="panel-cover__title panel-title"><a href="" title="link to homepage for HuangLuzhi" class="blog-button">黄鲁直</a></h1>
 
         
-        <span class="panel-cover__subtitle panel-subtitle">Just do IT later.</span>
+        <span class="panel-cover__subtitle panel-subtitle">猪年大吉</span>
         
         <hr class="panel-cover__divider" />
-        <p class="panel-cover__description">嗨，我是 GcsSloop，一名来自2.5次元的魔法师，Android自定义View系列文章作者，非著名程序员。</p>
+        <p class="panel-cover__description">嗨，我是傻逼。</p>
         <hr class="panel-cover__divider panel-cover__divider--secondary" />
         
         
-        <p class="panel-cover__description">欢迎来到我的魔法世界!</p>
+        <p class="panel-cover__description">欢迎来到废柴的世界!</p>
         
         
         <div class="navigation-wrapper">
@@ -102,27 +102,27 @@
                 <li class="navigation__item"><a href="/#blog" title="访问博客" class="blog-button">博客</a></li>
                 
                   
-                    <li class="navigation__item"><a href="https://github.com/GcsSloop" target="_blank" title="GcsSloop's GitHub">GitHub</a></li>
+                    <li class="navigation__item"><a href="https://github.com/huangluzhi" target="_blank" title="huangluzhi's GitHub">GitHub</a></li>
                   
                   
                 
                   
-                    <li class="navigation__item"><a href="/timeline" title="博客目录">目录</a></li>
+                    <!--<li class="navigation__item"><a href="/timeline" title="博客目录">目录</a></li>-->
                   
                   
                 
                   
-                    <li class="navigation__item"><a href="https://xiaozhuanlan.com/u/GcsSloop" target="_blank" title="小专栏">专栏</a></li>
+                    <li class="navigation__item"><a href="http://188.131.224.117:50041" target="_blank" title="FSAESIM Assetto Corsa 模拟竞速计时系统">FSAESIM</a></li>
                   
                   
                 
                   
-                    <li class="navigation__item"><a href="/category/customview" title="自定义View教程目录">自定义控件</a></li>
+                    <!--<li class="navigation__item"><a href="/category/customview" title="自定义View教程目录">自定义控件</a></li>-->
                   
                   
                 
                   
-                    <li class="navigation__item"><a href="/friends" title="友链">友链</a></li>
+                    <!--这是单行注释<li class="navigation__item"><a href="/friends" title="友链">友链</a></li>-->
                   
                   
                 
@@ -136,7 +136,7 @@
   
   <!-- Weibo -->
   <li class="navigation__item">
-    <a href="http://weibo.com/GcsSloop" title="@GcsSloop 的微博" target="_blank">
+    <a href="http://weibo.com/Yellowluzhi" title="@Yellowluzhi 的微博" target="_blank">
       <i class='social fa fa-weibo'></i>
       <span class="label">Weibo</span>
     </a>
@@ -146,7 +146,7 @@
   
   <!-- Github -->
   <li class="navigation__item">
-    <a href="https://github.com/GcsSloop" title="@GcsSloop 的 Github" target="_blank">
+    <a href="https://github.com/huangluzhi" title="@Huangluzhi 的 Github" target="_blank">
       <i class='social fa fa-github'></i>
       <span class="label">Github</span>
     </a>
@@ -154,33 +154,33 @@
   
   
   
-  <!-- Twitter -->
+  <!-- Twitter 
   <li class="navigation__item">
-    <a href="http://twitter.com/GcsSloop" title="@GcsSloop" target="_blank">
+    <a href="http://twitter.com/GcsSloop" title="@Yellowluzhi" target="_blank">
       <i class='social fa fa-twitter'></i>
       <span class="label">Twitter</span>
     </a>
   </li>
-  
+  -->
 
     
 
   
 
   
-  <!-- RSS -->
+  <!-- RSS 
   <li class="navigation__item">
     <a href="/feed.xml" rel="author" title="RSS" target="_blank">
       <i class='social fa fa-rss'></i>
       <span class="label">RSS</span>
     </a>
   </li>
-  
+  -->
 
   
   <!-- Email -->
   <li class="navigation__item">
-    <a href="mailto:GcsSloop@gmail.com" title="发邮件给我">
+    <a href="314726262@qq.com" title="发邮件给我">
       <i class='social fa fa-envelope'></i>
       <span class="label">Email</span>
     </a>
