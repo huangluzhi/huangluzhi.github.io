@@ -1,4 +1,2 @@
 #!/bin/bash
 jekyll serve
-cp -r _site/ ../GcsSloop/gcssloop.github.io
-cp -r _site/ ../GcsSloop/Coding
