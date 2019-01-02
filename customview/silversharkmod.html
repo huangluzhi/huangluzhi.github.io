@@ -365,9 +365,9 @@
 				</p>
 				<p>
 					<strong>2B: respect scene hierarchy</strong><br /><span>Make every mesh a child to its respective dummy !</span><br /><span>In this case, we want the wheels to rotate, so we need to make the visual wheel a child to the dummy. E.g.: Visual_wheel_LF mesh is a child of WHEEL_LF dummy.</span><br /><span>The hierarchy is very important. If we don't respect it, the car might load ok, but nothing will move. The wheels would be stationary as if part of the body design</span>
-					<img src="https://assettocorsamods.net/styles/default/xenforo/clear.png" width="100%" class="mceSmilieSprite mceSmilie1" alt=":)" /><span>.</span><br /><br /><span>IMPORTANT NOTES:</span><br /><span>- all dummies must have Z-axis pointing forward and Y-up.</span><br /><span>- car's body origin/pivot point : the model must be placed with the wheels touching the ground on the 0 coordinate (see below).</span><br />
+					<span>.</span><br /><br /><span>IMPORTANT NOTES:</span><br /><span>- all dummies must have Z-axis pointing forward and Y-up.</span><br /><span>- car's body origin/pivot point : the model must be placed with the wheels touching the ground on the 0 coordinate (see below).</span><br />
 					<img src="https://assettocorsamods.net/attachments/07_pivot_points-png.1945/" width="100%" alt="07_pivot_points.png" class="bbCodeImage LbImage" /><br /><br /><span>- pivot point of dummy must be identical to pivot of child mesh (or vice-versa). E.g. below: wheel mesh (colored texture) and the dummy (cube) have identical origin/pivot point.</span><br />
-					<img src="https://assettocorsamods.net/attachments/08_pivot_origin-png.1946/" width="100%" alt="08_pivot_origin.png" class="bbCodeImage LbImage" />
+					<img src="https://assettocorsamods.net/attachments/08_pivot_origin-png.1946/" width="50%" alt="08_pivot_origin.png" class="bbCodeImage LbImage" />
 				</p>
 			</blockquote>
 <p>
