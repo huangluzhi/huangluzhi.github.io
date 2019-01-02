@@ -280,6 +280,7 @@
 			</h3>
 			<p>
 				在这个官网上有制作一个最简单的神力科莎车辆mod的教程 <a href="http://assettocorsamods.net/threads/your-first-car-in-assetto-corsa-basic-guide.1019">http://assettocorsamods.net/threads/your-first-car-in-assetto-corsa-basic-guide.1019</a> ，在最下面有一个下载地址，包含了车辆的mod、fbx文件等等，是一个很好的例子，建议先下载一份，在接下来的过程中可以随时拿出来做做实验。
+				<a href="https://assettocorsamods.net/attachments/acm_tutorial_basic-7z.1951/">acm_tutorial_basic模型下载</a> 
 			</p>
 			<p>
 				同时此网址对于这个简单的mod也做了较为详细的教学内容，接下来的一部分将会以此教程为辅助进行解释讲解。
@@ -334,6 +335,13 @@
 				</div>
 				</p>
 			</blockquote>
+			<p>
+				除此之外在assettocorsa\sdk\dev\content\cars\formula_k文件夹中游戏开发商Kunos还准备了一套车辆模板formula_k（类似低级方程式），data文件夹中的ini文件会包含详细的参数信息注解。关于更多细节的指引可以参见assettocorsa\sdk\dev\car_pipeline_2.0rev \AC_Pipeline_PUB_Rev2.0.pdf，里面有较为详细的mod制作初级指引。
+			</p>
+			<p>
+				官方初级mod教程（啥都没有的意大利式英语教程）:<a href="https://youtu.be/jz5Y5ylGD4c">【官方教程】AC car modding - Assetto Corsa Official Media Channel</a>
+				
+			</p>
 <p>
     <br/>
 </p>
@@ -391,6 +399,7 @@
 			</h3>
 			<p>
 				ks editor是Assetto Corsa的sdk工具包之一，为模型导入修改贴图用。具体位置在: AC安装文件夹\assettocorsa\sdk\editor\ksEditor.exe
+				<a href="https://youtu.be/qj3z_yzdwbs">【官方教程】Assetto Corsa editor - Assetto Corsa Official Media Channel</a>
 			</p>
 			<p>
 				我们将模型导出为fbx文件然后导入ks editor，根据不同贴图需要在左上方选择贴图类型，Diffusion为表面贴图（表面涂装），Detail为纹理贴图（例如碳纤维材料），map为反射贴图（决定漫反射程度）。贴图通过PS对前面所述的uv图进行修改涂装后倒入到kseditor的贴图选项中。之后保存时会生成在fbx文件同目录生成一个 同名ini文件，就是贴图的配置信息文件。贴好图之后就要导出为kn5文件，既Assetto Corsa的mod模型文件。
