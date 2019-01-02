@@ -463,41 +463,26 @@
 					车辆仪表盘信息
 				</li>
 			</ul>
-			<dl>
-				<dt>
-					collider.kn5 车辆碰撞检测模型
-				</dt>
-				<dd>
-					collider的造型过程与车辆本体模型类似，只不过collider用于检测车辆碰撞，要求模型包含车辆边界，数据量尽量小。注意collider的坐标应与车辆本体相同，以免造成两者位置偏移。
-				</dd>
-				<dt>
-					lod.kn5车辆简化模型
-				</dt>
-				<dd>
-					此步骤在模型简单或者是计算性能足够（不需要联机）的情况下可以跳过。简化模型用于优化游戏模型，增强游戏运行表现。所有lod的大小逐级递减，游戏中离视角所在位置越远的车辆将采用约简化的lod模型。相关的配置文件在data\lod.ini中。
-				</dd>
-				<dt>
-					悬架动画
-				</dt>
-				<dd>
-					悬架动画对于开放式车轮的车辆来说相对比较重要。悬架动画在3ds Max里面实现，然后导入到ks editor之后会生成悬架动画文件.ksanim，将其放入animations文件夹中即可在游戏中实现动画效果。
-				</dd>
-				<dd>
-					 <a href="https://youtu.be/h8Gyo0UbwTw">【视频教程】Assetto Corsa - How to Animate Suspension Using That Script And DIR_ Feature</a>
-				</dd>
-				<dd>
-					详细操作方法在pipeline.pdf文件P56后。
-				</dd>
-				<dt>
-					车辆仪表盘及灯光信息
-				</dt>
-				<dd>
-					灯光信息在data\digital_instruments.ini中。转速表仪表盘信息在data\digital_instruments.ini中，支持显示速度、转速、温度、G值、油量等等信息。详细操作方法在pipeline.pdf文件P19后。	
-				</dd>
-				<dd>
-					<a href="http://www.assettocorsa.net/forum/index.php?threads/analog-digital-instruments-lights-q-a-request-official-support-here-check-first-post.12249/">【AC官方论坛】更详细的指引</a>
-				</dd>
-			</dl>
+			<p>
+				<strong>collider.kn5 车辆碰撞检测模型</strong><br />
+				<span>collider的造型过程与车辆本体模型类似，只不过collider用于检测车辆碰撞，要求模型包含车辆边界，数据量尽量小。注意collider的坐标应与车辆本体相同，以免造成两者位置偏移。</span><br /><br />
+				<strong>lod.kn5车辆简化模型</strong><br />
+				<span>此步骤在模型简单或者是计算性能足够（不需要联机）的情况下可以跳过。简化模型用于优化游戏模型，增强游戏运行表现。所有lod的大小逐级递减，游戏中离视角所在位置越远的车辆将采用约简化的lod模型。相关的配置文件在data\lod.ini中。</span><br /><br />
+				<strong>悬架动画</strong><br />
+				<span>悬架动画对于开放式车轮的车辆来说相对比较重要。悬架动画在3ds Max里面实现，然后导入到ks editor之后会生成悬架动画文件.ksanim，将其放入animations文件夹中即可在游戏中实现动画效果。</span><br />
+				<span><a href="https://youtu.be/h8Gyo0UbwTw">【视频教程】Assetto Corsa - How to Animate Suspension Using That Script And DIR_ Feature</a></span><br />
+				<span>详细操作方法在pipeline.pdf文件P56后。</span><br /><br />
+				<strong>车辆仪表盘及灯光信息</strong><br />
+				<span>灯光信息在data\digital_instruments.ini中。转速表仪表盘信息在data\digital_instruments.ini中，支持显示速度、转速、温度、G值、油量等等信息。详细操作方法在pipeline.pdf文件P19后。	</span><br /><br />
+				<img src="https://assettocorsamods.net/attachments/05_hierarchy-png.1944/" width="70%" alt="05_hierarchy.png" class="bbCodeImage LbImage" /><br />
+				<span>*above scene will also be attached to present post</span><br /><br />
+			</p>			
+<p>
+    <br/>
+</p>
+			<p>
+				其余内容正在持续完善中。。。
+			</p>
 <p>
     <br/>
 </p>
