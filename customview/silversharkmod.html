@@ -431,8 +431,12 @@
 				首先在car.ini中修改车辆名字 SCREEN_NAME，按照是否有悬架运动动画来决定修改车辆的悬挂参数 USE_ANIMATED_SUSPENSIONS（0为无，1为有，设置为1而没有动画将导致游戏中模型读取失败）。
 			</p>
 			<p>
+<<<<<<< HEAD
 				然后打开AC安装目录下的\sdk\dev\ksSusEditor\knSusEditor.exe， 点击File导入车辆所在目录下data/suspensions.ini文件。在右边的可视化窗口中可以看到车辆的悬挂图形，通过修改左侧信息可以即时编辑悬挂参数和显示悬挂图形。每项参数的具体含义请参考formula_k文件夹内的同名文件，在参数后面都有注释信息。<br />
 				<img src="\assets\2018\silversharkmod\suspensioneditor.jpg" width="50%">
+=======
+				然后打开AC安装目录下的\sdk\dev\ksSusEditor\knSusEditor.exe， 点击File导入车辆所在目录下data/suspensions.ini文件。在右边的可视化窗口中可以看到车辆的悬挂图形，通过修改左侧信息可以即时编辑悬挂参数和显示悬挂图形。每项参数的具体含义请参考formula_k文件夹内的同名文件，在参数后面都有注释信息。
+>>>>>>> parent of a6387cf... update
 			</p>
 			<p>
 				接下来修改车辆的引擎。最简单的方法是通过CarTuner替换引擎参数。在没有可用引擎信息的情况下，需要自行修改engine.ini文件来修改引擎参数。同时扭矩曲线被保存在power.lut文件中（lut文件通常包含二维曲线信息），建议用NotePad++等文本编辑器打开。打开后每行是某转速下对应的最大扭矩，“|”左边是转速，右边是扭矩。修改对应参数以改变车辆引擎参数。
